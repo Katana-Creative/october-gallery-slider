@@ -1,0 +1,29 @@
+# ===================================
+#  Field Definitions
+# ===================================
+
+fields:
+
+    title:
+        label: Title
+        span: left
+        placeholder: Title
+
+    slug:
+
+        label: Slug
+        span: right
+        placeholder: Slug Slider
+
+    images:
+        label: Images
+        type: fileupload
+        mode: image
+
+
+
+
+
+
+
+

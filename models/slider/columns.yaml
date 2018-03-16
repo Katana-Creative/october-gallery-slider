@@ -1,0 +1,20 @@
+# ===================================
+#  Column Definitions
+# ===================================
+
+columns:
+
+  id:
+    label: ID
+
+  title:
+    label: Slug
+    searchable: true
+
+  slug:
+    label: Slug
+    searchable: true
+
+  created_at:
+    label: Created
+    type: date

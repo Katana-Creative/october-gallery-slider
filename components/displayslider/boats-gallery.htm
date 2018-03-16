@@ -1,0 +1,7 @@
+
+
+{% for slide in slider.images %}
+	<!--welcome !-->
+	<div class="boat-layer-one" {% if loop.last == true %} id="boat-four" {% endif %} style="background-image: url({{ slide.path }});"></div>
+
+{% endfor %}

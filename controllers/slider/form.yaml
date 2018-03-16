@@ -1,0 +1,19 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+name: Create Slider
+
+form: ~/plugins/lzodevelopement/slider/models/slider/fields.yaml
+
+modelClass: Lzodevelopement\Slider\Models\Slider
+
+defaultRedirect: Lzodevelopement/slider/slider/index
+
+create:
+    redirect: Lzodevelopement/slider/slider/update/:id
+    redirectClose: Lzodevelopement/slider/slider/index
+
+update:
+    redirect: Lzodevelopement/slider/slider/index
+    redirectClose: Lzodevelopement/slider/slider/index

@@ -1,0 +1,13 @@
+{% for slide in slider.images %}
+
+
+        <li><a class="img-gallery-links link-one" href="{{ slide.path }}" title="{{ slide.description | raw }}">
+            
+
+            <div class="img-one gal-img" style="background: url({{ slide.thumb(340,355,"crop") }}) center /cover no-repeat;">
+                <div class="img-overlay"></div>
+            </div>
+
+        </a></li>
+
+{% endfor %}

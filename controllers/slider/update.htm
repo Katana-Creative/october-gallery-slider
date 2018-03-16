@@ -1,0 +1,60 @@
+<?php Block::put('breadcrumb') ?>
+<ul>
+    <li>
+        <a href="<?= Backend::url('lzodevelopement/slider/slider') ?>">
+            <?= e(trans('lzodevelopement.slider::lang.sliders')); ?>
+        </a>
+    </li>
+
+    <li><?= e($this->pageTitle) ?></li>
+</ul>
+<?php Block::endPut() ?>
+
+<?php if (!$this->fatalError): ?>
+
+<?= Form::open(['class'=>'layout-item stretch layout-column']) ?>
+
+<?= $this->formRender() ?>
+
+<div class="form-buttons layout-item fix">
+
+    <div class="loading-indicator-container">
+
+        <button
+                type="button"
+                data-request="onSave"
+                data-request-data="close:1"
+                data-hotkey="ctrl+s"
+                data-hotkey-mac="cmd+s"
+                data-load-indicator="<?= e(trans('lzodevelopement.slider::lang.creating')); ?>"
+                class="btn btn-primary oc-icon-arrow-circle-o-up"">
+            <?= e(trans('lzodevelopement.slider::lang.create')); ?>
+        </button>
+
+        <button
+                type="button"
+                class="btn btn-danger oc-icon-trash-o"
+                data-request="onDelete"
+                data-request-data="close:1"
+                data-hotkey="ctrl+s"
+                data-hotkey-mac="cmd+s"
+                data-load-indicator="<?= e(trans('lzodevelopement.slider::lang.deleting')); ?>"
+                >
+
+            <?= e(trans('lzodevelopement.slider::lang.delete')); ?>
+        </button>
+    </div>
+</div>
+
+<?= Form::close() ?>
+
+<?php else: ?>
+
+<p class="flash-message static error"><?= e($this->fatalError) ?></p>
+
+<p><a href="<?= Backend::url('slider/slider/index') ?>" class="btn btn-default">
+        <?= e(trans('lzodevelopement.slider::lang.return')); ?>
+    </a>
+</p>
+
+<?php endif ?>
